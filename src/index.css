@@ -1,0 +1,17 @@
+.nameArea {
+    text-align: center;
+}
+
+.navBar {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pageButton {
+    background-color: Transparent;
+    border: none;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
