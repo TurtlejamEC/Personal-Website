@@ -1,0 +1,24 @@
+{
+  "name": "Personal-Website",
+  "version": "1.0.0",
+  "description": "Because everyone needs one, right?",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TurtleBCA/Personal-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TurtleBCA/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/TurtleBCA/Personal-Website#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
+}
