@@ -1,8 +1,12 @@
-class Name extends React.Component {
+class BasicInfo extends React.Component {
     render() {
         return (
-            <div className="nameArea">
-                <h1>Elias Cho</h1>
+            <div className="basicInfoArea">
+                <div className="center">
+                    <h1>Elias Cho</h1>
+                    <p>Github: github.com/TurtleBCA</p>
+                    <p>Youtube: www.youtube.com/user/Aquaboost123/featured</p>
+                </div>
             </div>
         );
     }
@@ -35,20 +39,20 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <Name />
+                <BasicInfo />
                 <NavBar onPageButtonClick={page => this.props.onPageButtonClick(page)} />
             </div>
         );
     }
 }
 
-class Body extends React.Component {
+class Content extends React.Component {
     render() {
         const pageHTML = {
-            "About": <div>about</div>,
-            "Music": <div>music</div>,
-            "Projects": <div>projects</div>,
-            "Blog": <div>blog</div>,
+            "About": <div className="content">about</div>,
+            "Music": <div className="content">music</div>,
+            "Projects": <div className="content">projects</div>,
+            "Blog": <div className="content">blog</div>,
         };
 
         return pageHTML[this.props.page];
@@ -69,9 +73,9 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div className="Main">
+            <div className="main">
                 <Header onPageButtonClick={page => this.handlePageButtonClick(page)}/>
-                <Body page={this.state.page}/>
+                <Content page={this.state.page}/>
             </div>
         );
     }

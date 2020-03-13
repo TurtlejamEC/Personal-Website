@@ -6,31 +6,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Name = function (_React$Component) {
-    _inherits(Name, _React$Component);
+var BasicInfo = function (_React$Component) {
+    _inherits(BasicInfo, _React$Component);
 
-    function Name() {
-        _classCallCheck(this, Name);
+    function BasicInfo() {
+        _classCallCheck(this, BasicInfo);
 
-        return _possibleConstructorReturn(this, (Name.__proto__ || Object.getPrototypeOf(Name)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (BasicInfo.__proto__ || Object.getPrototypeOf(BasicInfo)).apply(this, arguments));
     }
 
-    _createClass(Name, [{
+    _createClass(BasicInfo, [{
         key: "render",
         value: function render() {
             return React.createElement(
                 "div",
-                { className: "nameArea" },
+                { className: "basicInfoArea" },
                 React.createElement(
-                    "h1",
-                    null,
-                    "Elias Cho"
+                    "div",
+                    { className: "center" },
+                    React.createElement(
+                        "h1",
+                        null,
+                        "Elias Cho"
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "Github: github.com/TurtleBCA"
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "Youtube: www.youtube.com/user/Aquaboost123/featured"
+                    )
                 )
             );
         }
     }]);
 
-    return Name;
+    return BasicInfo;
 }(React.Component);
 
 var PageButton = function (_React$Component2) {
@@ -109,7 +123,7 @@ var Header = function (_React$Component4) {
             return React.createElement(
                 "div",
                 { className: "header" },
-                React.createElement(Name, null),
+                React.createElement(BasicInfo, null),
                 React.createElement(NavBar, { onPageButtonClick: function onPageButtonClick(page) {
                         return _this6.props.onPageButtonClick(page);
                     } })
@@ -120,37 +134,37 @@ var Header = function (_React$Component4) {
     return Header;
 }(React.Component);
 
-var Body = function (_React$Component5) {
-    _inherits(Body, _React$Component5);
+var Content = function (_React$Component5) {
+    _inherits(Content, _React$Component5);
 
-    function Body() {
-        _classCallCheck(this, Body);
+    function Content() {
+        _classCallCheck(this, Content);
 
-        return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).apply(this, arguments));
     }
 
-    _createClass(Body, [{
+    _createClass(Content, [{
         key: "render",
         value: function render() {
             var pageHTML = {
                 "About": React.createElement(
                     "div",
-                    null,
+                    { className: "content" },
                     "about"
                 ),
                 "Music": React.createElement(
                     "div",
-                    null,
+                    { className: "content" },
                     "music"
                 ),
                 "Projects": React.createElement(
                     "div",
-                    null,
+                    { className: "content" },
                     "projects"
                 ),
                 "Blog": React.createElement(
                     "div",
-                    null,
+                    { className: "content" },
                     "blog"
                 )
             };
@@ -159,7 +173,7 @@ var Body = function (_React$Component5) {
         }
     }]);
 
-    return Body;
+    return Content;
 }(React.Component);
 
 var Main = function (_React$Component6) {
@@ -188,11 +202,11 @@ var Main = function (_React$Component6) {
 
             return React.createElement(
                 "div",
-                { className: "Main" },
+                { className: "main" },
                 React.createElement(Header, { onPageButtonClick: function onPageButtonClick(page) {
                         return _this9.handlePageButtonClick(page);
                     } }),
-                React.createElement(Body, { page: this.state.page })
+                React.createElement(Content, { page: this.state.page })
             );
         }
     }]);

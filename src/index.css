@@ -1,15 +1,61 @@
-.nameArea {
+.basicInfoArea {
     text-align: center;
+    vertical-align: center;
+    height: 85%;
+    position: relative;
+}
+
+.center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.header {
+    height:30vh;
+    position: relative;
+    color: #ffffff;
 }
 
 .navBar {
+    margin: auto;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    height: 15%;
+    width: 50%;
 }
 
 .pageButton {
     background-color: Transparent;
     border: none;
+    width: 25%;
+    height: 100%;
+    float: left;
+    font-size: 150%;
+    border-bottom: solid #ffffff;
+    color: #ffffff;
+}
+
+.main {
+}
+
+.content {
+    color: #c4dfe6;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(to bottom, #66a5ad 0%, #07575b 50%, #003b46 100%);
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 * {
