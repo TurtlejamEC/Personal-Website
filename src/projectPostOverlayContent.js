@@ -1,147 +1,30 @@
 export const projectOverlayContent = [
     <div>
-        <h1>This is my first project post!</h1>
-        <p>here is some text</p>
-        <p>here is some text</p>
+        <h1>Twitter Fake News Propagation</h1>
+        <p>TODO</p>
     </div>,
     <div>
-        <h1>This is my second project post!</h1>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
+        <h1>Rhythm Bullet Hell</h1>
+        <p>TODO</p>
     </div>,
     <div>
-        <h1>This is my third project post!</h1>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
+        <h1>Mystery Dungeon Tactics</h1>
+        <p>TODO</p>
     </div>,
     <div>
-        <h1>This is my fourth blog post!</h1>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
+        <h1>Competitive Programming</h1>
+        <p>TODO</p>
     </div>,
     <div>
-        <h1>This is my fifth blog post!</h1>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-        <p>here is some text</p>
-    </div>
+        <h1>BCA Bus Map</h1>
+        <p>TODO</p>
+    </div>,
+    <div>
+        <h1>Trojan.Ransom.BCA</h1>
+        <p>TODO</p>
+    </div>,
+    <div>
+        <h1>CAS</h1>
+        <p>TODO</p>
+    </div>,
 ];
