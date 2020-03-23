@@ -39,12 +39,22 @@ var BasicInfo = function (_React$Component) {
                     React.createElement(
                         "p",
                         null,
-                        "Github: github.com/TurtleBCA"
+                        "Github: ",
+                        React.createElement(
+                            "a",
+                            { target: "_blank", rel: "noopener noreferrer", href: "https://github.com/TurtleBCA" },
+                            "github.com/TurtleBCA"
+                        )
                     ),
                     React.createElement(
                         "p",
                         null,
-                        "Youtube: www.youtube.com/user/Aquaboost123/featured"
+                        "Youtube: ",
+                        React.createElement(
+                            "a",
+                            { target: "_blank", rel: "noopener noreferrer", href: "https://youtube.com/user/Aquaboost123/featured" },
+                            "youtube.com/user/Aquaboost123/featured"
+                        )
                     )
                 )
             );
@@ -260,7 +270,7 @@ function Overlay(props) {
         "div",
         { className: "overlay" },
         React.createElement("div", { className: "darkBackground" }),
-        React.createElement("img", { src: "src/img/x.png", style: { display: "block", float: "right", width: "5em", borderRadius: "2%" },
+        React.createElement("img", { src: "src/img/x.png", style: { display: "block", float: "right", width: "5em", borderRadius: "2%", cursor: "pointer" },
             onClick: props.onOverlayXClick }),
         React.createElement(
             "div",

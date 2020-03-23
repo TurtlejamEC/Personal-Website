@@ -25,6 +25,7 @@
     border-bottom: solid #ffffff;
     color: #ffffff;
     float: left;
+    cursor: pointer;
 }
 
 .main {
@@ -78,6 +79,7 @@ ul {
 
 .post:hover {
     background-color: rgba(0,0,0,.2);
+    cursor: pointer;
 }
 
 .overlay {

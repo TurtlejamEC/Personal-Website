@@ -12,8 +12,8 @@ class BasicInfo extends React.Component {
             <div className="basicInfoArea">
                 <div className="center">
                     <h1>Elias Cho</h1>
-                    <p>Github: github.com/TurtleBCA</p>
-                    <p>Youtube: www.youtube.com/user/Aquaboost123/featured</p>
+                    <p>Github: <a target="_blank" rel="noopener noreferrer" href="https://github.com/TurtleBCA">github.com/TurtleBCA</a></p>
+                    <p>Youtube: <a target="_blank" rel="noopener noreferrer" href="https://youtube.com/user/Aquaboost123/featured">youtube.com/user/Aquaboost123/featured</a></p>
                 </div>
             </div>
         );
@@ -113,7 +113,7 @@ function Overlay(props) {
     let overlay = (
         <div className="overlay">
             <div className="darkBackground" />
-            <img src="src/img/x.png" style={{display:"block", float:"right", width:"5em", borderRadius:"2%"}}
+            <img src="src/img/x.png" style={{display:"block", float:"right", width:"5em", borderRadius:"2%", cursor:"pointer"}}
                  onClick={props.onOverlayXClick}/>
             <div className="postOverlayContentWrapper" style={{padding: "2%"}}>
                 {content}
