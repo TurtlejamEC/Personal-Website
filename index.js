@@ -6,6 +6,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+import { blogOverlayContent } from "./blogPostOverlayContent.js";
+import { projectOverlayContent } from "./projectPostOverlayContent.js";
+import { BlogPostInfo, blogPostInfoArray } from "./blogPostInfo.js";
+import { ProjectPostInfo, projectPostInfoArray } from "./projectPostInfo.js";
+
 var BasicInfo = function (_React$Component) {
     _inherits(BasicInfo, _React$Component);
 
@@ -134,8 +139,46 @@ var Header = function (_React$Component4) {
     return Header;
 }(React.Component);
 
-var Content = function (_React$Component5) {
-    _inherits(Content, _React$Component5);
+var Post = function (_React$Component5) {
+    _inherits(Post, _React$Component5);
+
+    function Post() {
+        _classCallCheck(this, Post);
+
+        return _possibleConstructorReturn(this, (Post.__proto__ || Object.getPrototypeOf(Post)).apply(this, arguments));
+    }
+
+    _createClass(Post, [{
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
+                { className: "post", onClick: this.props.onPostClick },
+                React.createElement("img", { src: this.props.imgSrc, style: { float: "right", width: "10em" } }),
+                React.createElement(
+                    "p",
+                    null,
+                    this.props.page === "Blog" ? this.props.date : ""
+                ),
+                React.createElement(
+                    "h2",
+                    null,
+                    this.props.title
+                ),
+                React.createElement(
+                    "p",
+                    null,
+                    this.props.description
+                )
+            );
+        }
+    }]);
+
+    return Post;
+}(React.Component);
+
+var Content = function (_React$Component6) {
+    _inherits(Content, _React$Component6);
 
     function Content() {
         _classCallCheck(this, Content);
@@ -146,6 +189,31 @@ var Content = function (_React$Component5) {
     _createClass(Content, [{
         key: "render",
         value: function render() {
+            var _this9 = this;
+
+            var posts = void 0;
+            if (this.props.page === "Projects") {
+                posts = projectPostInfoArray.map(function (post, index) {
+                    return React.createElement(
+                        "li",
+                        { key: index },
+                        React.createElement(Post, { page: _this9.props.page, onPostClick: function onPostClick() {
+                                return _this9.props.handlePostClick(index);
+                            }, id: index, imgSrc: post.thumbnailSrc, title: post.title, description: post.description })
+                    );
+                });
+            } else if (this.props.page === "Blog") {
+                posts = blogPostInfoArray.map(function (post, index) {
+                    return React.createElement(
+                        "li",
+                        { key: index },
+                        React.createElement(Post, { page: _this9.props.page, onPostClick: function onPostClick() {
+                                return _this9.props.handlePostClick(index);
+                            }, id: index, imgSrc: post.thumbnailSrc, date: post.stringDate(), title: post.title, description: post.description })
+                    );
+                });
+            }
+
             var pageHTML = {
                 "About": React.createElement(
                     "div",
@@ -235,12 +303,20 @@ var Content = function (_React$Component5) {
                 "Projects": React.createElement(
                     "div",
                     { className: "content" },
-                    "projects"
+                    React.createElement(
+                        "ul",
+                        { className: "postList" },
+                        posts
+                    )
                 ),
                 "Blog": React.createElement(
                     "div",
                     { className: "content" },
-                    "blog"
+                    React.createElement(
+                        "ul",
+                        { className: "postList" },
+                        posts
+                    )
                 )
             };
 
@@ -251,16 +327,37 @@ var Content = function (_React$Component5) {
     return Content;
 }(React.Component);
 
-var Main = function (_React$Component6) {
-    _inherits(Main, _React$Component6);
+function Overlay(props) {
+    var content = props.page === "Projects" ? projectOverlayContent[props.id === -1 ? 0 : props.id] : blogOverlayContent[props.id === -1 ? 0 : props.id];
+    var overlay = React.createElement(
+        "div",
+        { className: "overlay" },
+        React.createElement("div", { className: "darkBackground" }),
+        React.createElement("img", { src: "src/img/x.png", style: { display: "block", float: "right", width: "5em", borderRadius: "2%" },
+            onClick: props.onOverlayXClick }),
+        React.createElement(
+            "div",
+            { className: "postOverlayContentWrapper", style: { padding: "2%" } },
+            content
+        )
+    );
+
+    return overlay;
+}
+
+var Main = function (_React$Component7) {
+    _inherits(Main, _React$Component7);
 
     function Main(props) {
         _classCallCheck(this, Main);
 
-        var _this8 = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
+        var _this10 = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
-        _this8.state = { page: "About" };
-        return _this8;
+        _this10.state = {
+            page: "About",
+            overlay: -1
+        };
+        return _this10;
     }
 
     _createClass(Main, [{
@@ -271,17 +368,49 @@ var Main = function (_React$Component6) {
             });
         }
     }, {
+        key: "handlePostClick",
+        value: function handlePostClick(newOverlay) {
+            this.setState({
+                overlay: newOverlay
+            });
+        }
+    }, {
+        key: "handleOverlayXClick",
+        value: function handleOverlayXClick() {
+            this.setState({
+                overlay: -1
+            });
+        }
+    }, {
         key: "render",
         value: function render() {
-            var _this9 = this;
+            var _this11 = this;
+
+            var overlay = React.createElement(
+                "div",
+                { className: "OverlayWrapper", style: { position: "fixed", top: 0, left: 0, right: 0, bottom: 0, width: "100%", height: "100%", overflowY: "scroll", display: this.state.overlay === -1 ? "none" : "block" } },
+                React.createElement(Overlay, { page: this.state.page, id: this.state.overlay, onOverlayXClick: function onOverlayXClick() {
+                        return _this11.handleOverlayXClick();
+                    } })
+            );
+            var actual = React.createElement(
+                "div",
+                { className: "NonOverlayWrapper" },
+                React.createElement(Header, { onPageButtonClick: function onPageButtonClick(page) {
+                        return _this11.handlePageButtonClick(page);
+                    } }),
+                React.createElement(Content, { page: this.state.page, handlePostClick: function handlePostClick(newOverlay) {
+                        return _this11.handlePostClick(newOverlay);
+                    } })
+            );
+
+            document.body.style.overflow = this.state.overlay === -1 ? "visible" : "hidden";
 
             return React.createElement(
                 "div",
                 { className: "main" },
-                React.createElement(Header, { onPageButtonClick: function onPageButtonClick(page) {
-                        return _this9.handlePageButtonClick(page);
-                    } }),
-                React.createElement(Content, { page: this.state.page })
+                overlay,
+                actual
             );
         }
     }]);
