@@ -9,6 +9,18 @@ export const projectOverlayContent = [
             <li>Research Plan: <a target="_blank" rel="noopener noreferrer" href={"https://docs.google.com/document/d/1ZowGso8cbXKEE-qLb-lY0Iwl4ERPBaGsFBZl8DCUUBo/edit?usp=sharing"}>https://docs.google.com/document/d/1ZowGso8cbXKEE-qLb-lY0Iwl4ERPBaGsFBZl8DCUUBo/edit?usp=sharing</a></li>
             <li>Github repository: <a target="_blank" rel="noopener noreferrer" href={"https://github.com/arjnai21/TwitterDataCollection"}>https://github.com/arjnai21/TwitterDataCollection</a></li>
         </ol>
+        <h2>Table of Contents</h2>
+        <ol>
+            <li>Situational Context: Research Program</li>
+            <li>Objectives</li>
+            <li>General Algorithm</li>
+            <li>Implementation: Data Structure</li>
+            <li>Implementation: Algorithm</li>
+            <li>Analysis and Interpretation of Acquired Data</li>
+            <li>Results</li>
+            <li>Conclusions</li>
+            <li>Future Work</li>
+        </ol>
         <img src="src/img/Projects/TwitterDataCollection/ExampleGraph.png" style={{float:"right", width:"50em", verticalAlign:"middle", margin:"1em"}} />
         <h2>Situational Context: Research Program</h2>
         <p>This was a research project that I did with a friend named <a target="_blank" rel="noopener noreferrer" href={"https://github.com/arjnai21"}>Arjun</a> (https://github.com/arjnai21) in our sophomore year in high school. Our high school has a rather robust research program. We can find a topic and begin research under a teacher to be known as a “mentor” by selecting one out of a pool of certain research teachers. Having a mentor is necessary to participate in research competitions. Then, once we have a mentor and a research plan, we can enter our research into research competitions. Our high school is well known for winning research competitions, so at the lowest level of research competitions, there is the <a target="_blank" rel="noopener noreferrer" href={"https://researchexpo.bergen.org/index.html"}>BCA Research Expo</a> (https://researchexpo.bergen.org/index.html). The BCA Research Expo’s purpose is for students to share what they researched to the community, get judged and critiqued by professionals in the industry, and select the finalists who will compete in <a target="_blank" rel="noopener noreferrer" href={"https://www.societyforscience.org/isef/"}>ISEF</a> (Regeneron International Science and Engineering Fair) (https://www.societyforscience.org/isef/). This is a complex process, so we wanted to learn the ropes and see how the research program works so that in a future research project, we’ll know what we are doing and how to win.</p>

@@ -55,6 +55,60 @@ export var projectOverlayContent = [React.createElement(
             )
         )
     ),
+    React.createElement(
+        "h2",
+        null,
+        "Table of Contents"
+    ),
+    React.createElement(
+        "ol",
+        null,
+        React.createElement(
+            "li",
+            null,
+            "Situational Context: Research Program"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Objectives"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "General Algorithm"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Implementation: Data Structure"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Implementation: Algorithm"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Analysis and Interpretation of Acquired Data"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Results"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Conclusions"
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Future Work"
+        )
+    ),
     React.createElement("img", { src: "src/img/Projects/TwitterDataCollection/ExampleGraph.png", style: { float: "right", width: "50em", verticalAlign: "middle", margin: "1em" } }),
     React.createElement(
         "h2",
