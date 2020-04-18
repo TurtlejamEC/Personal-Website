@@ -12,9 +12,9 @@ export class ProjectPostInfo {
 
 export const projectPostInfoArray = [
     {
-        "title": "Twitter Fake News Propagation",
+        "title": "Modeling the Propagation of True/Fake News on Twitter",
         "description": "Research conducted on the propagation of fake news on Twitter. How quickly does fake news spread? How does it fare against true news?",
-        "thumbnailSrc": "src/img/Projects/TwitterDataCollectionThumbnail.png"
+        "thumbnailSrc": "src/img/Projects/TwitterDataCollection/TwitterDataCollectionThumbnail.png"
     },
     {
         "title": "Rhythm Bullet Hell",
