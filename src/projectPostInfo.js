@@ -18,7 +18,7 @@ export const projectPostInfoArray = [
     },
     {
         "title": "Rhythm Bullet Hell",
-        "description": "A game project made in less than 24 hours at a hackathon. Inspired by Just Shapes and Beats, this is a bullet hell game where obstacles are synchronized to music.",
+        "description": "A game project made in approximately 12 hours at a 24 hour hackathon. Inspired by Just Shapes and Beats, this is a bullet hell game where obstacles are synchronized to music.",
         "thumbnailSrc": "src/img/Projects/RhythmBulletHellThumbnail.png"
     },
     {

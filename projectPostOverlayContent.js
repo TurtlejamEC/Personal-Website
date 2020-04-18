@@ -597,9 +597,77 @@ export var projectOverlayContent = [React.createElement(
         "Rhythm Bullet Hell"
     ),
     React.createElement(
+        "h2",
+        null,
+        "TL;DR"
+    ),
+    React.createElement(
         "p",
         null,
-        "TODO"
+        "I made this game alone in Unity in approximately 12 hours at a 24 hour hackathon. You have to dodge obstacles that are synced with music."
+    ),
+    React.createElement(
+        "h2",
+        null,
+        "Important Links"
+    ),
+    React.createElement(
+        "ol",
+        null,
+        React.createElement(
+            "li",
+            null,
+            "Github repository (Clone to play the game yourself!): ",
+            React.createElement(
+                "a",
+                { target: "_blank", rel: "noopener noreferrer", href: "https://github.com/TurtleBCA/Rhythm-Bullet-Hell-Game" },
+                "https://github.com/TurtleBCA/Rhythm-Bullet-Hell-Game"
+            )
+        ),
+        React.createElement(
+            "li",
+            null,
+            "Gameplay video: ",
+            React.createElement(
+                "a",
+                { target: "_blank", rel: "noopener noreferrer", href: "https://youtu.be/SJ7Ed8Ppa1w" },
+                "https://youtu.be/SJ7Ed8Ppa1w"
+            )
+        )
+    ),
+    React.createElement("iframe", { width: "560", height: "315", src: "https://www.youtube.com/embed/SJ7Ed8Ppa1w", frameBorder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowFullScreen: true, style: { float: "right", verticalAlign: "middle", margin: "1em" } }),
+    React.createElement(
+        "h2",
+        null,
+        "Situational Context: Hackathon"
+    ),
+    React.createElement(
+        "p",
+        null,
+        "HackBCA V is my first hackathon ever. HackBCA is a 24 hour hackathon for high school students. You began coding at 6:30 PM and had to submit your project to be judged by 11:00 AM. Obviously, you can code and work on your project, but there are also various workshops to attend, activities to take part in, and food and drinks to consume. I decided to work alone on a game. Little did I know that this event would be the first and only all-nighter I pulled off. Kind of. I tried really hard to go to sleep when it was getting very late (at like around 2 or 3). I tried for about 2 hours, but HackBCA unfortunately did not accommodate sleeping. It was very difficult to go to sleep, and I don\u2019t think I actually fell asleep at all. This alone is probably enough to make me not want to go back. Nevertheless, it was an interesting experience, and I never put together a game so fast before. I think I spent about 12 hours on this project. It\u2019s honestly hard to tell with all of the other stuff going on like ceremonies, dinner, and hanging out with friends. But I\u2019m kind of proud about the result considering the extremely short amount of time to make this."
+    ),
+    React.createElement(
+        "h2",
+        null,
+        "Gameplay"
+    ),
+    React.createElement(
+        "p",
+        null,
+        "I made this project in Unity. The game is heavily inspired by the game Just Shapes & Beats. The idea is that you control a small sky blue circle to dodge everything that you see. Any obstacles that you touch are added to the hit count that you see at the top right corner. You can \u201Cdash\u201D by hitting the spacebar to make you temporarily invincible and super fast. Obstacles are synced with the music. Although I am a musician, I did not make the song used in this game. There wouldn\u2019t be nearly enough time to make a song at the hackathon anyway (you couldn\u2019t prepare assets for the project before the hackathon). The song used in this game is \"TAK - PAE-KI (meganeko Remix)\" by meganeko (who is an amazing artist btw). Honestly, it\u2019s much easier to understand what\u2019s going on by watching gameplay of it. Check out the Youtube video to see me play the game. The actual game is nowhere near as laggy, I promise."
+    ),
+    React.createElement(
+        "p",
+        null,
+        "You can try out the game yourself! All you need to do is clone the ",
+        React.createElement(
+            "a",
+            { target: "_blank", rel: "noopener noreferrer", href: "https://github.com/TurtleBCA/Rhythm-Bullet-Hell-Game" },
+            "Github repository"
+        ),
+        " (https://github.com/TurtleBCA/Rhythm-Bullet-Hell-Game) and run the appropriate build (only Windows and MacOSX provided)."
     )
 ), React.createElement(
     "div",
