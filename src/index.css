@@ -44,7 +44,8 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(to bottom, #66a5ad 0%, #07575b 50%, #003b46 100%);
+    /*background: linear-gradient(to bottom, #427F8C 0%, #011C26 100%);*/
+    background: linear-gradient(to bottom, #03738C 0%, #011624 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -109,5 +110,5 @@ ul {
 }
 
 a {
-    color: #c4dfe6;
+    color: #ABDFE6;
 }

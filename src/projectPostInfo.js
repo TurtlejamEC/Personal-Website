@@ -17,6 +17,11 @@ export const projectPostInfoArray = [
         "thumbnailSrc": "src/img/Projects/TwitterDataCollection/TwitterDataCollectionThumbnail.png"
     },
     {
+        "title": "Harmonizer",
+        "description": "An algorithm to give a melody accompanying chords. Two methods are presented, one involving machine learning and another applying music theory.",
+        "thumbnailSrc": "src/img/Projects/Harmonizer/HarmonizerThumbnail.png"
+    },
+    {
         "title": "Rhythm Bullet Hell",
         "description": "A game project made in approximately 12 hours at a 24 hour hackathon. Inspired by Just Shapes and Beats, this is a bullet hell game where obstacles are synchronized to music.",
         "thumbnailSrc": "src/img/Projects/RhythmBulletHellThumbnail.png"
