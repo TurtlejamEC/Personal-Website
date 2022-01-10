@@ -1,11 +1,37 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
+import ParticleBackground from '../../components/ParticleBackground/ParticleBackground';
+import { WindowDimensions } from '../../types/WindowDimensions';
 import './App.css';
 
-export default class App extends React.Component {
+interface AppState {
+  windowDimensions: WindowDimensions;
+}
+
+export default class App extends React.Component<{}, AppState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {windowDimensions: {width: window.innerWidth, height: window.innerHeight}};
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ windowDimensions: {width: window.innerWidth, height: window.innerHeight} });
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
   render() {
     return (
-      <div className="App">
+      <div id="App">
+        <ParticleBackground windowDimensions={this.state.windowDimensions} />
         <Header />
       </div>
     );
