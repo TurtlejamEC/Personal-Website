@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import ParticleBackground from '../../components/ParticleBackground/ParticleBackground';
 import NavBar from '../../components/NavBar/NavBar';
@@ -35,6 +36,7 @@ export default class App extends React.Component<{}, AppState> {
         <ParticleBackground windowDimensions={this.state.windowDimensions} />
         <Header />
         <NavBar />
+        <Outlet />
       </div>
     </>;
   }
