@@ -44,7 +44,6 @@ export default function ParticleAnimation(canvasContext: CanvasRenderingContext2
 
   const image = document.getElementById("Particle") as HTMLImageElement;
 
-  console.log("called");
   function draw() {
     requestAnimationFrame(draw);
     ctx.clearRect(0, 0, canvas.width, canvas.height);

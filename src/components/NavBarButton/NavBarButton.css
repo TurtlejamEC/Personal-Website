@@ -1,0 +1,10 @@
+#NavBarButton {
+  background-color: Transparent;
+  border: none;
+  width: 25%;
+  font-size: 150%;
+  border-bottom: solid #ffffff;
+  color: #ffffff;
+  float: left;
+  cursor: pointer;
+}

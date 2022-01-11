@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import ParticleBackground from '../../components/ParticleBackground/ParticleBackground';
+import NavBar from '../../components/NavBar/NavBar';
 import { WindowDimensions } from '../../types/WindowDimensions';
 import './App.css';
 
@@ -30,10 +31,10 @@ export default class App extends React.Component<{}, AppState> {
 
   render() {
     return <>
-      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"></link>
       <div id="App" className="glow">
         <ParticleBackground windowDimensions={this.state.windowDimensions} />
         <Header />
+        <NavBar />
       </div>
     </>;
   }
