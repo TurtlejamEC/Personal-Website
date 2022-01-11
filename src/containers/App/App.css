@@ -1,3 +1,15 @@
 .centerHorizontal{
   text-align: center;
 }
+
+.glow {
+  text-shadow: 0 0 2em #fff;
+}
+
+#App {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #ABDFE6;
+}

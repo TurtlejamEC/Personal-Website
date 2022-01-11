@@ -29,11 +29,12 @@ export default class App extends React.Component<{}, AppState> {
   }
 
   render() {
-    return (
-      <div id="App">
+    return <>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"></link>
+      <div id="App" className="glow">
         <ParticleBackground windowDimensions={this.state.windowDimensions} />
         <Header />
       </div>
-    );
+    </>;
   }
 }
