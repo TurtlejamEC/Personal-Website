@@ -17,7 +17,7 @@ export default class NavBarButton extends React.Component<NavBarButtonProps> {
   render() {
     return (
       <Link to={linkMap.get(this.props.text)!}>
-        <div id="NavBarButton">{this.props.text}</div>
+        <div className="NavBarButton">{this.props.text}</div>
       </Link>
     );
   }
