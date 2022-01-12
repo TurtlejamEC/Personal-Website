@@ -1,3 +1,8 @@
+import AlgorithmExplanation1to3 from '../assets/Projects/Harmonizer/AlgorithmExplanation1to3.png';
+import AlgorithmExplanation4to6 from '../assets/Projects/Harmonizer/AlgorithmExplanation4to6.png';
+import HarmonizerSegments from '../assets/Projects/Harmonizer/HarmonizerSegments.png';
+import TrainingExplanation from '../assets/Projects/Harmonizer/TrainingExplanation.png';
+
 export const Harmonizer =
   <div id="Harmonizer">
     <h1>Harmonizer</h1>
@@ -25,7 +30,7 @@ export const Harmonizer =
     <p>In addition, I wanted to incorporate music somewhere into the project. As can be seen throughout this site, I am very interested in music theory and composition. I’ve been learning about various tricks in theory over the years and in my AP Music Theory class that I wanted to put to the test. I also wanted to learn how to work with MIDI files because I feel like they could be fun or useful to tinker with if I ever have more music-related projects in the future. I would eventually come across a Python package called <a target="_blank" rel="noopener noreferrer" href={"https://github.com/craffel/pretty-midi"}>pretty_midi</a> (https://github.com/craffel/pretty-midi) to do so.</p>
     <h2>Project inspiration</h2>
     <p>Some people have told me in the past about their desires to make songs and/or to harmonize but that they lack the skills to do so. Some have melodies in their heads, but are unable to turn them into full-fledged songs. After doing a bunch of four-part writing in my AP Music Theory class, an idea began to grow to write a program that could harmonize a melody. After all, functional harmony seems rather methodical. I figured that if I could discover what I’m exactly doing to harmonize a melody, I could get a program to carry out the mysterious algorithm that my brain undertakes.</p>
-    <img src="src/img/Projects/Harmonizer/HarmonizerSegments.png" style={{ float: "right", width: "35em", verticalAlign: "middle", margin: "1em" }} />
+    <img src={HarmonizerSegments} style={{ float: "right", width: "35em", verticalAlign: "middle", margin: "1em" }} />
     <h2>The Algorithm</h2>
     <p>After lots of introspection, I solidified the steps in harmonization that I was unconsciously doing before.</p>
     <p>This whole algorithm revolves around working in “segments”. Due to time constraints of the project, I assumed the melody was in common time. Define a “segment” to be a piece of a measure of the melody. A segment can either be 1 beat long, 2 beats long, or 4 beats long. A segment can be any 1, 2, or 4 beat period of time within a single measure. This diagram illustrates all of the possible segments.</p>
@@ -43,7 +48,7 @@ export const Harmonizer =
       <li>Iterate through each segment, voicing the chords such that every pitch in the determined accompanying pitch inventory is used and the distance between two consecutive notes of a voice are minimized.</li>
     </ol>
     <p>Here’s a more detailed explanation of each step:</p>
-    <img src="src/img/Projects/Harmonizer/AlgorithmExplanation1to3.png" style={{ float: "right", width: "35em", verticalAlign: "middle", margin: "1em" }} />
+    <img src={AlgorithmExplanation1to3} style={{ float: "right", width: "35em", verticalAlign: "middle", margin: "1em" }} />
     <h3>Step 1</h3>
     <p>The algorithm is a sweep line algorithm that takes into account previous information. However, we need to start somewhere. We have to determine the location and length of the very first segment from which all other segments will essentially be built off of.</p>
     <h3>Step 2</h3>
@@ -51,7 +56,7 @@ export const Harmonizer =
     <h3>Step 3</h3>
     <p>Normally, in addition to melody information of the segment we are working on, we would take into account the previous chord to determine the new accompanying chord. However, because we are working with the very first segment, we don’t have any previous information to work off of. This step could arguably be the most crucial step, but it’s not easy to decide how to go about this step. How to determine the accompaniment is hard enough, but without prior information, it makes the problem even harder. I will discuss the two different methods I tried to determine chords with later. For now, we’ll only use the melody information of the segment we are working on for now.</p>
     <h3>Step 4</h3>
-    <img src="src/img/Projects/Harmonizer/AlgorithmExplanation4to6.png" style={{ float: "right", width: "35em", verticalAlign: "middle", margin: "1em" }} />
+    <img src={AlgorithmExplanation4to6} style={{ float: "right", width: "35em", verticalAlign: "middle", margin: "1em" }} />
     <p>Next, we determine the next segment to work off of. In other words, we decide whether to make the next 1, 2, or 4 beats the new segment. Remember that segments are not allowed to cross measures. This restriction increases the chances of making a better generated accompaniment.</p>
     <h3>Step 5</h3>
     <p>To make sure that our accompaniment can actually go well with the melody within the segment, we should know what the melody’s pitches are, right? Store those pitches in a one-hot encoded array.</p>
@@ -71,7 +76,7 @@ export const Harmonizer =
     <p>Unfortunately, I came across problems in training that I wasn’t able to solve in time for the fair at my school. The discriminator became way too good too quickly at being able to tell whether the generator’s chords were legitimate or not. And to be fair, the generator’s chords didn’t look great either. Generally, the generator would end up outputting the same things every single time, and sometimes, they didn’t look like nice chords. I tried making a bigger training set, checking to see if the training set was fine, training for longer periods of time, and checking the implementation for errors. Due to my experience however, I ended up not being able to figure out what was wrong. With only a day before my presentation at the fair, I had to drop this method and implement something completely different so that I would have something to show. It felt pretty bad to not be able to present something that I spent almost all my time on, but it was a necessity.</p>
 
     <figure className={"twitterFigure"} style={{ width: "35em", float: "right", margin: "1em" }}>
-      <img src="src/img/Projects/Harmonizer/TrainingExplanation.png" style={{ width: "35em" }} />
+      <img src={TrainingExplanation} style={{ width: "35em" }} />
       <figcaption>Note: This diagram illustrates the idea of a training example, but it is not quite accurate concerning the actual process. The actual process only works in terms of exactly one beat at a time.</figcaption>
     </figure>
 
