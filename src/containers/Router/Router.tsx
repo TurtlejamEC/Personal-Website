@@ -5,6 +5,7 @@ import AboutPage from '../../components/AboutPage/AboutPage';
 import MusicPage from '../../components/MusicPage/MusicPage';
 import ProjectsPage from '../../components/ProjectsPage/ProjectsPage';
 import ProjectsList from '../../components/ProjectsList/ProjectsList';
+import Project from '../../components/Project/Project';
 
 export default class Router extends React.Component {
   render() {
@@ -14,6 +15,7 @@ export default class Router extends React.Component {
           <Route path='/' element={<App />}>
             <Route path="music" element={<MusicPage />} />
             <Route path="projects" element={<ProjectsPage />}>
+              <Route path=":projectId" element={<Project />} />
               <Route index element={<ProjectsList />} />
             </Route>
             <Route index element={<AboutPage />} />

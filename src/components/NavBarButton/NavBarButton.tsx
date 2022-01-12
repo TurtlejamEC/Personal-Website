@@ -16,7 +16,7 @@ const linkMap: Map<string, string> = new Map([
 export default class NavBarButton extends React.Component<NavBarButtonProps> {
   render() {
     return (
-      <Link to={linkMap.get(this.props.text)!}>
+      <Link to={linkMap.get(this.props.text)!} className="RouterLink">
         <div className="NavBarButton">{this.props.text}</div>
       </Link>
     );
