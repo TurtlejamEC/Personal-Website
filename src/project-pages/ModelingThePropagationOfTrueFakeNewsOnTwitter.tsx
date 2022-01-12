@@ -1,3 +1,11 @@
+import ExampleGraph from '../assets/Projects/ModelingThePropagationOfTrueFakeNewsOnTwitter/ExampleGraph.png';
+import Fig2 from '../assets/Projects/ModelingThePropagationOfTrueFakeNewsOnTwitter/Fig2.png';
+import Fig3 from '../assets/Projects/ModelingThePropagationOfTrueFakeNewsOnTwitter/Fig3.png';
+import Fig4 from '../assets/Projects/ModelingThePropagationOfTrueFakeNewsOnTwitter/Fig4.png';
+import Fig5 from '../assets/Projects/ModelingThePropagationOfTrueFakeNewsOnTwitter/Fig5.png';
+import Fig6 from '../assets/Projects/ModelingThePropagationOfTrueFakeNewsOnTwitter/Fig6.png';
+import Fig7 from '../assets/Projects/ModelingThePropagationOfTrueFakeNewsOnTwitter/Fig7.png';
+
 export const ModelingThePropagationOfTrueFakeNewsOnTwitter =
   <div id="ModelingThePropagationOfTrueFakeNewsOnTwitter">
     <h1>Modeling the Propagation of True/Fake News on Twitter</h1>
@@ -21,7 +29,7 @@ export const ModelingThePropagationOfTrueFakeNewsOnTwitter =
       <li>Conclusions</li>
       <li>Future Work</li>
     </ol>
-    <img src="src/img/Projects/TwitterDataCollection/ExampleGraph.png" style={{ float: "right", width: "50em", verticalAlign: "middle", margin: "1em" }} />
+    <img src={ExampleGraph} style={{ float: "right", width: "50em", verticalAlign: "middle", margin: "1em" }} />
     <h2>Situational Context: Research Program</h2>
     <p>This was a research project that I did with a friend named <a target="_blank" rel="noopener noreferrer" href={"https://github.com/arjnai21"}>Arjun</a> (https://github.com/arjnai21) in our sophomore year in high school. Our high school has a rather robust research program. We can find a topic and begin research under a teacher to be known as a “mentor” by selecting one out of a pool of certain research teachers. Having a mentor is necessary to participate in research competitions. Then, once we have a mentor and a research plan, we can enter our research into research competitions. Our high school is well known for winning research competitions, so at the lowest level of research competitions, there is the <a target="_blank" rel="noopener noreferrer" href={"https://researchexpo.bergen.org/index.html"}>BCA Research Expo</a> (https://researchexpo.bergen.org/index.html). The BCA Research Expo’s purpose is for students to share what they researched to the community, get judged and critiqued by professionals in the industry, and select the finalists who will compete in <a target="_blank" rel="noopener noreferrer" href={"https://www.societyforscience.org/isef/"}>ISEF</a> (Regeneron International Science and Engineering Fair) (https://www.societyforscience.org/isef/). This is a complex process, so we wanted to learn the ropes and see how the research program works so that in a future research project, we’ll know what we are doing and how to win.</p>
     <p>This was a difficult venture into the research program because our mentor, to be frank, ironically was not very knowledgeable about the research program. However, we couldn’t select a different mentor. Each mentor teacher is specialized in a specific category, and our mentor was the only teacher appropriate for our research category. As a result, we learned how the research program worked in a very rough way.</p>
@@ -46,7 +54,7 @@ export const ModelingThePropagationOfTrueFakeNewsOnTwitter =
       <li>If any of the recent Tweets contain a keyword, begin step 1 on that Tweet.</li>
     </ol>
     <h2>Implementation: Data Structure</h2>
-    <img src="src/img/Projects/TwitterDataCollection/ExampleGraph.png" style={{ float: "right", width: "40em", verticalAlign: "middle", margin: "1em" }} />
+    <img src={ExampleGraph} style={{ float: "right", width: "40em", verticalAlign: "middle", margin: "1em" }} />
     <p>A Twitter user is represented as a “Node”. A Node is an object with the following properties:</p>
     <ol>
       <li>“influenced” - a boolean that signifies whether the user has made a Tweet with a keyword or not</li>
@@ -70,32 +78,32 @@ export const ModelingThePropagationOfTrueFakeNewsOnTwitter =
     <div style={{ float: "right", margin: "1em" }}>
       <div>
         <figure className={"twitterFigure"}>
-          <img src="src/img/Projects/TwitterDataCollection/Fig2.png" style={{ width: "30em" }} />
+          <img src={Fig2} style={{ width: "30em" }} />
           <figcaption>Figure 2: For each post, the number of nodes at each level were counted with a BFS algorithm. Many graphs that grew very large were prematurely terminated due to hardware limitations.</figcaption>
         </figure>
         <figure className={"twitterFigure"}>
-          <img src="src/img/Projects/TwitterDataCollection/Fig3.png" style={{ width: "30em" }} />
+          <img src={Fig3} style={{ width: "30em" }} />
           <figcaption>Figure 3: The number of influenced nodes at each level that were counted with the same BFS algorithm.</figcaption>
         </figure>
       </div>
       <div>
         <figure className={"twitterFigure"}>
-          <img src="src/img/Projects/TwitterDataCollection/Fig4.png" style={{ width: "30em" }} />
+          <img src={Fig4} style={{ width: "30em" }} />
           <figcaption>Figure 4: For each node, the influenced and uninfluenced children were counted. The calculated percentage was stored in an array. Finally, all of the percentages of a graph were averaged.
           </figcaption>
         </figure>
         <figure className={"twitterFigure"}>
-          <img src="src/img/Projects/TwitterDataCollection/Fig5.png" style={{ width: "30em" }} />
+          <img src={Fig5} style={{ width: "30em" }} />
           <figcaption>Figure 5: The regression was calculated over the set of all counts of nodes at a level excluding outliers. The regression for true news was quadratic but without the linear term. The regression for fake news was linear. Both regressions had y-intercepts fixed at 1.</figcaption>
         </figure>
       </div>
       <div>
         <figure className={"twitterFigure"}>
-          <img src="src/img/Projects/TwitterDataCollection/Fig6.png" style={{ width: "30em" }} />
+          <img src={Fig6} style={{ width: "30em" }} />
           <figcaption>Figure 6: The derivatives of the regressions as shown in Figure 5. Notice the intersection shortly before level 2.</figcaption>
         </figure>
         <figure className={"twitterFigure"}>
-          <img src="src/img/Projects/TwitterDataCollection/Fig7.png" style={{ width: "30em" }} />
+          <img src={Fig7} style={{ width: "30em" }} />
           <figcaption>Figure 7: The ratio of all influenced nodes in a graph to the total number of nodes, influenced or not.</figcaption>
         </figure>
       </div>
