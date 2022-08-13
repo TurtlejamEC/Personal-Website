@@ -18,13 +18,13 @@ export default class Router extends React.Component {
   }
 
   render() {
-    const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
+    const path = (/#!(\/.*)$/.exec(window.location.hash) || [])[1];
 	if (path) {
 		this.browserHistory.replace(path);
 	}
 
     return (
-      <CustomRouter history={this.browserHistory}>
+      <CustomRouter browserHistory={this.browserHistory}>
         <Routes>
           <Route path='/' element={<App />}>
             <Route path="music" element={<MusicPage />} />
