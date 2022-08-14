@@ -1,0 +1,39 @@
+.centerHorizontal{
+  text-align: center;
+}
+
+.glow {
+  text-shadow: 0 0 2em #fff;
+}
+
+.listCard {
+  width: 100%;
+  display: table;
+  border: 0.25em solid white;
+  padding-left: 1em;
+  background-color: rgba(0,0,0,.1);
+  margin-bottom: 1em;
+}
+
+.listCard:hover {
+  background-color: rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.page {
+  color: #ffffff;
+  padding: 2% 10% 2% 10%;
+  font-size: 110%;
+}
+
+#App {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #ABDFE6;
+}
+
+.RouterLink {
+  text-decoration: none;
+}
