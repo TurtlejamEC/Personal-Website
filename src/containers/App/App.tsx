@@ -13,12 +13,12 @@ interface AppState {
 export default class App extends React.Component<{}, AppState> {
   constructor(props: {}) {
     super(props);
-    this.state = {windowDimensions: {width: window.innerWidth, height: window.innerHeight}};
+    this.state = {windowDimensions: {width: window.outerWidth, height: window.outerHeight}};
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   updateWindowDimensions() {
-    this.setState({ windowDimensions: {width: window.innerWidth, height: window.innerHeight} });
+    this.setState({ windowDimensions: {width: window.outerWidth, height: window.outerHeight} });
   }
 
   componentDidMount() {
