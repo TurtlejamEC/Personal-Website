@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { createBrowserHistory, BrowserHistory } from 'history';
 import App from '../App/App';
 import AboutPage from '../../components/AboutPage/AboutPage';
+import BlogPage from '../../components/BlogPage/BlogPage';
 import CustomRouter from '../CustomRouter/CustomRouter';
 import MusicPage from '../../components/MusicPage/MusicPage';
 import ProjectsPage from '../../components/ProjectsPage/ProjectsPage';
@@ -32,6 +33,7 @@ export default class Router extends React.Component {
               <Route path=":projectId" element={<Project />} />
               <Route index element={<ProjectsList />} />
             </Route>
+            <Route path="blog" element={<BlogPage />} />
             <Route index element={<AboutPage />} />
           </Route>
         </Routes>
